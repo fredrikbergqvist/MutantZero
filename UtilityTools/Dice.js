@@ -5,7 +5,7 @@ class Dice{
         this.max = max;
     }
 
-    function rollDice(){
+    rollDice(){
         "use strict";
         return Math.floor(Math.random() * (Dice.max - Dice.min + 1)) + Dice.min;
     }
@@ -23,7 +23,7 @@ export class Dice66{
         "use strict";
         this.dice = new Dice6();
     }
-    function rollDice(){
+    rollDice(){
         "use strict";
         var diceRoll1 = Dice66.dice.rollDice();
         var diceRoll2 = Dice66.dice.rollDice();
