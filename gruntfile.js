@@ -9,8 +9,8 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     "expand": true,
-                    "cwd": "UtilityTools",
-                    "src": ["*.js"],
+                    "cwd": "../MutantZero/",
+                    "src": ["**/*.jsx"],
                     "dest": "dist/",
                     "ext": ".js"
                 }]
