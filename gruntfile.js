@@ -11,17 +11,27 @@ module.exports = function(grunt) {
                     "expand": true,
                     "cwd": "../MutantZero/",
                     "src": ["**/*.jsx"],
-                    "dest": "dist/",
+                    "dest": ".tmp/babel/",
                     "ext": ".js"
                 }]
+            }
+        },
+
+        "browserify": {
+            dist: {
+                files: {
+                    ".tmp/browserify/DiceGenerator.js": ".tmp/babel/UtilityTools/DiceGenerator.js",
+                    ".tmp/browserify/Dice.js": ".tmp/babel/UtilityTools/Dice.js"
+                }
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-babel');
+    grunt.loadNpmTasks('grunt-browserify');
 
     // Task to run default
     grunt.registerTask('default', [
-        'babel'
+        'babel', 'browserify'
     ]);
 };
