@@ -1,3 +1,5 @@
+import { Dice6, Dice66 }  from '/UtilityTools/Dice';
+
 var MutantGeneratorData = {
     stats: {
         sty:{
