@@ -1,21 +1,6 @@
 module.exports = function(grunt) {
 
     grunt.initConfig({
-        "babel": {
-            options: {
-                sourceMap: true
-            },
-            dist: {
-                files: [{
-                    "expand": true,
-                    "cwd": "../MutantZero/",
-                    "src": ["**/*.jsx"],
-                    "dest": ".tmp/babel/",
-                    "ext": ".js"
-                }]
-            }
-        },
-
         "browserify": {
             dist: {options: {
                 transform: [["babelify", { "stage": 0 }]]
@@ -29,7 +14,6 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-browserify');
 
     // Task to run default
