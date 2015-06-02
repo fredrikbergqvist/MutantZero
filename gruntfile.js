@@ -20,8 +20,7 @@ module.exports = function(grunt) {
         "browserify": {
             dist: {
                 files: {
-                    ".tmp/browserify/DiceGenerator.js": ".tmp/babel/UtilityTools/DiceGenerator.js",
-                    ".tmp/browserify/Dice.js": ".tmp/babel/UtilityTools/Dice.js"
+                    ".tmp/browserify/GenerateMonster.js": ".tmp/babel/MonsterGenerator/GenerateMonster.jsx"
                 }
             }
         }
