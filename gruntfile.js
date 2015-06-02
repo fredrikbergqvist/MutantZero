@@ -3,8 +3,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         "babel": {
             options: {
-                sourceMap: true,
-                    modules: "amd"
+                sourceMap: true
             },
             dist: {
                 files: [{
@@ -18,9 +17,13 @@ module.exports = function(grunt) {
         },
 
         "browserify": {
-            dist: {
+            dist: {options: {
+                transform: [["babelify", { "stage": 0 }]]
+            },
                 files: {
-                    ".tmp/browserify/GenerateMonster.js": ".tmp/babel/MonsterGenerator/GenerateMonster.jsx"
+                    //"diceBundle.js": "UtilityTools/DiceGenerator.js"
+                    "monsterGeneratorBundle.js": "MonsterGenerator/GenerateMonster.js"
+                    //".tmp/bundle.js": ".tmp/babel/**/*.js"
                 }
             }
         }
@@ -31,6 +34,6 @@ module.exports = function(grunt) {
 
     // Task to run default
     grunt.registerTask('default', [
-        'babel', 'browserify'
+        'browserify'
     ]);
 };

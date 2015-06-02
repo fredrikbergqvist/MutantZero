@@ -25,8 +25,8 @@ export class Dice66{
     }
     rollDice(){
         "use strict";
-        var diceRoll1 = Dice66.dice.rollDice();
-        var diceRoll2 = Dice66.dice.rollDice();
+        var diceRoll1 = this.dice.rollDice();
+        var diceRoll2 = this.dice.rollDice();
 
         return parseInt(diceRoll1.rolls + diceRoll2.rolls, 10)
     }

@@ -1,6 +1,6 @@
-import { rollD6, rollD66 }  from '/UtilityTools/DiceGenerator';
+import { rollD6, rollD66 }  from '../UtilityTools/DiceGenerator';
 
-export var MutantGeneratorData = {
+export var Stats = {
     stats: {
         sty:{
             name: "Styrka",
@@ -10,7 +10,10 @@ export var MutantGeneratorData = {
             name: "Kyl",
             abbr: "KYL"
         }
-    },
+    }
+}
+
+export var MutantGeneratorData = {
     size: {
         dice: rollD66(),
         result:[
@@ -19,7 +22,7 @@ export var MutantGeneratorData = {
             to: 14,
             resultText: "Ynklig",
             stat: {
-                type: this.stat.sty,
+                type: Stats.stats.sty,
                 value: 1
             }
         },
@@ -28,7 +31,7 @@ export var MutantGeneratorData = {
             to: 21,
             resultText: "Nätt",
             stat: {
-                type: this.stat.sty,
+                type: Stats.stats.sty,
                 value: 2
             }
         },
@@ -37,7 +40,7 @@ export var MutantGeneratorData = {
             to: 33,
             resultText: "Medelstor",
             stat: {
-                type: this.stat.sty,
+                type: Stats.stats.sty,
                 value: 3
             }
         },
@@ -46,7 +49,7 @@ export var MutantGeneratorData = {
             to: 44,
             resultText: "Kraftig",
             stat: {
-                type: this.stat.sty,
+                type: Stats.stats.sty,
                 value: 4
             }
         },
@@ -55,7 +58,7 @@ export var MutantGeneratorData = {
             to: 55,
             resultText: "Storväxt",
             stat: {
-                type: this.stat.sty,
+                type: Stats.stats.sty,
                 value: 8
             }
         },
@@ -64,7 +67,7 @@ export var MutantGeneratorData = {
             to: 62,
             resultText: "Jättelik",
             stat: {
-                type: this.stat.sty,
+                type: Stats.stats.sty,
                 value: 10
             }
         },
@@ -73,7 +76,7 @@ export var MutantGeneratorData = {
             to: 66,
             resultText: "Gigantisk",
             stat: {
-                type: this.stat.sty,
+                type: Stats.stats.sty,
                 value: 12
             }
         }
@@ -88,7 +91,7 @@ export var MutantGeneratorData = {
                 to: 18,
                 resultText: "Sinneslö växtätare",
                 stat: {
-                    type: this.stat.kyl,
+                    type: Stats.stats.kyl,
                     value: 0
                 }
             },
@@ -97,7 +100,7 @@ export var MutantGeneratorData = {
                 to: 28,
                 resultText: "Växtätare",
                 stat: {
-                    type: this.stat.kyl,
+                    type: Stats.stats.kyl,
                     value: 1
                 }
             },
@@ -106,7 +109,7 @@ export var MutantGeneratorData = {
                 to: 36,
                 resultText: "Samlare",
                 stat: {
-                    type: this.stat.kyl,
+                    type: Stats.stats.kyl,
                     value: 2
                 }
             },
@@ -115,7 +118,7 @@ export var MutantGeneratorData = {
                 to: 44,
                 resultText: "Asätare",
                 stat: {
-                    type: this.stat.kyl,
+                    type: Stats.stats.kyl,
                     value: 4
                 }
             },
@@ -124,7 +127,7 @@ export var MutantGeneratorData = {
                 to: 62,
                 resultText: "Rovdjur",
                 stat: {
-                    type: this.stat.kyl,
+                    type: Stats.stats.kyl,
                     value: 6
                 }
             },
@@ -133,7 +136,7 @@ export var MutantGeneratorData = {
                 to: 66,
                 resultText: "Aggressivt rovdjur",
                 stat: {
-                    type: this.stat.kyl,
+                    type: Stats.stats.kyl,
                     value: 8
                 }
             },

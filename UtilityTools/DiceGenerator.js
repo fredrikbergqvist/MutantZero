@@ -1,4 +1,4 @@
-import { Dice6, Dice66 }  from '/UtilityTools/Dice';
+import { Dice6, Dice66 }  from './Dice';
 
 export function rollD6(numberOfDice = 1) {
     "use strict";
