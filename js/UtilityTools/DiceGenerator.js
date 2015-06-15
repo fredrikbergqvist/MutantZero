@@ -7,10 +7,10 @@ export function rollD6(numberOfDice = 1) {
 export function rollD66(){
     "use strict";
 
-    return rollDice(new Dice66(), 1);
+    return rollDice(new Dice66());
 }
 
-function rollDice(diceToRoll, numberOfDice){
+function rollDice(diceToRoll, numberOfDice=1){
     "use strict";
 
     var total = 0;

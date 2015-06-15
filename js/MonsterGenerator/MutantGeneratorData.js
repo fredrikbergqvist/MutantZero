@@ -1,5 +1,15 @@
 import { rollD6, rollD66 }  from '../UtilityTools/DiceGenerator';
 
+export function GetResult(object){
+    console.log(object);
+	for(var item of object.result){
+		if( object.dice.result >= item.from && object.dice.result <= item.to){
+			return item;
+			break;
+		}
+	}
+}
+
 export var Stats = {
     stats: {
         sty:{
